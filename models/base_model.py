@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """BaseModel from which other class is derived"""
-from models import storage
+import models
 from uuid import uuid4
 from datetime import datetime
 
@@ -25,7 +25,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
-            storage.new(self)
+            models.storage.new(self)
 
     def __str__(self):
         """
@@ -39,7 +39,7 @@ class BaseModel:
             Updates time of last object update
         """
         self.update_at = datetime.now()
-        storage.save()
+        models.storage.save()
 
     def to_dict(self):
         """
