@@ -9,5 +9,10 @@ header {
 }
 
 .logo {
-    background: url('/home/nk/AirBnB_clone/web_static/images/logo-airbnb.png') no-repeat center;
+    background: url('/images/logo-airbnb.png') no-repeat center;
+    background-position: left center;
+    padding-left: 20px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
 }
